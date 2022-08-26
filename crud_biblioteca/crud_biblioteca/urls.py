@@ -15,12 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from crud_biblioteca.views import pages, produtos
+from crud_biblioteca.views import pages, produtos,categorias
 
 urlpatterns = [
     path('', pages.home, name='home'),
     path('produtos', produtos.lista, name='produtos.lista'),
     path('produtos/novo', produtos.novo, name='produtos.novo'),
     path('produtos/editar/<id>', produtos.editar, name='produtos.editar'),
-    path('produtos/excluir/<id>', produtos.excluir, name='produtos.excluir')
+    path('produtos/excluir/<id>', produtos.excluir, name='produtos.excluir'),
+    
+    path('categorias', categorias.lista, name='categorias.lista'),
+    path('categorias/novo', categorias.novo, name='categorias.novo'),
+    path('categorias/editar/<id>', categorias.editar, name='categorias.editar'),
+    path('categorias/excluir/<id>', categorias.excluir, name='categorias.excluir')
 ]

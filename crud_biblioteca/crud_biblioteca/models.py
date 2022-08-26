@@ -11,3 +11,4 @@ class produto(models.Model):
     categoria = models.ForeignKey('categoria', on_delete=models.CASCADE)
 #python .\manage.py makemigrations crud_biblioteca
 #python .\manage.py migrate
+#python .\manage.py runserver
